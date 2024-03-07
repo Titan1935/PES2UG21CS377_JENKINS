@@ -10,6 +10,8 @@ pipeline {
     stage('Test') {
       steps {
         sh './task5'
+        // Intentional error: Adding a command that will fail
+        sh 'exit 1'
         echo 'Test Successful!'
       }
     }
